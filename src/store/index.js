@@ -1,7 +1,4 @@
 import axios from "axios"
-import {
-    types
-} from "babel-core"
 import Vue from "vue"
 import Vuex from "vuex"
 import {
@@ -9,7 +6,7 @@ import {
     ADD_TODO,
     DEL_TODO,
     COMPLETE_TODO
-} from "types"
+} from "./types"
 
 Vue.use(Vuex)
 
@@ -36,7 +33,7 @@ export default new Vuex.Store({
             const index = payload.index
             state.list.splice(index, 1)
         },
-        [COMPLETE_TODO](statem, payload) {
+        [COMPLETE_TODO](state, payload) {
             const index = payload.index
             state.list[index].isComplete = 1
         }

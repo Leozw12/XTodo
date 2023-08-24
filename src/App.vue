@@ -36,7 +36,7 @@
     }
 </script>
 
-<style lang="scss">
+<style>
     * {
         margin: 0;
         padding: 0;

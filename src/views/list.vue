@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-table class="el-table" :data="todolist" border style="width: 100%;" :row-class-name="tableRowClassName">
+        <el-table class="el-table" :data="todoList" border style="width: 100%;" :row-class-name="tableRowClassName">
             <el-table-column fixed prop="name" label="事项名称" width="150"></el-table-column>
             <el-table-column prop="date" label="截止时间" width="120"></el-table-column>
             <el-table-column prop="type" label="事项类型" width="120"></el-table-column>
@@ -17,6 +17,7 @@
                 </template>
             </el-table-column>
         </el-table>
+        <br />
         <div style="text-align: left;">
             总共：{{ todoList.length }}个任务。已完成{{ count(1) }}个任务。未完成{{ count(0) }}个任务。
         </div>
@@ -25,7 +26,7 @@
 
 <script>
     import {mapGetters, mapMutations} from "vuex"
-    import {COMPLETE_TODO, DEL_TODO} from "../store/types"
+    import {COMPLETE_TODO, DEL_TODO} from "@/store/types"
 
     export default {
         methods: {
@@ -52,7 +53,7 @@
                     return "优先"
                 }
                 return "正常"
-            ]}
+            }
         },
         data() {
             return {

@@ -5,7 +5,7 @@
         </el-form-item>
 
         <el-form-item prop="date" label="截止时间:">
-            <el-date-picker type="date" placeholder="选择日期" v-model="form.date" value-format="yyyy-NN-dd" style="width: 100%;"></el-date-picker>
+            <el-date-picker type="date" placeholder="选择日期" v-model="form.date" value-format="yyyy-MM-dd" style="width: 100%;"></el-date-picker>
         </el-form-item>
 
         <el-form-item prop="type" label="事项类型:">
@@ -36,7 +36,7 @@
 
 <script>
     import { mapMutations } from "vuex"
-    import { ADD_TODO } from "../store/types"
+    import { ADD_TODO } from "@/store/types"
 
     export default {
         data() {
